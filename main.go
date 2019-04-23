@@ -97,7 +97,7 @@ func main() {
 	for instance, id := range chains {
 		wg.Add(1)
 
-		go func() {
+		go func(instance int, id string) {
 			defer wg.Done()
 
 			var ticker *time.Ticker
@@ -176,7 +176,7 @@ func main() {
 					break loop // exit
 				}
 			}
-		}()
+		}(instance, id)
 	}
 
 	// Blocking main loop
