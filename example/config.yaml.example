@@ -1,0 +1,8 @@
+enabled_plugin: json
+
+update: 10s
+
+plugins:
+  json:
+    sofile: plugin/json/json.so
+    file: test.json
