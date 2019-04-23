@@ -2,12 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/ganehag/protist/plugin"
+	"errors"
 	"github.com/ganehag/protist/filter"
+	"github.com/ganehag/protist/plugin"
 	"io/ioutil"
 	"os"
 	"sort"
-	"errors"
 )
 
 type JsonDefinition struct {
@@ -22,7 +22,7 @@ type jsonPlugin struct {
 	author  string
 	name    string
 	version string
-	file string
+	file    string
 }
 
 func (p *jsonPlugin) Author() string {
@@ -95,6 +95,6 @@ func Init(args interface{}) plugin.I {
 		author:  "Mikael Ganehag Brorsson",
 		name:    "json-loader",
 		version: "0.0.1",
-		file: file,
+		file:    file,
 	}
 }

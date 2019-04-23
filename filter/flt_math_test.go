@@ -44,7 +44,6 @@ func TestConstEval(t *testing.T) {
 	}
 }
 
-
 /*
  * Add
  *
@@ -172,7 +171,6 @@ func TestSubEval(t *testing.T) {
 		t.Error("Eval failed basic math")
 	}
 }
-
 
 /*
  * Mul
